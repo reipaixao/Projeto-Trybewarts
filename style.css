@@ -25,7 +25,7 @@ main {
   padding: 10px;
 }
 
-#trybewarts-header-logo {
+.trybewarts-header-logo {
   align-self: flex-start;
   width: 70px;
 }
