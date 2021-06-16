@@ -9,16 +9,16 @@ bLogin.addEventListener('click', () => {
   } else {
     alert('Login ou senha inválidos.');
   }
-})
+}
+)
 
 const checker = document.getElementById('agreement');
 const sendBtn = document.getElementById('submit-btn');
 
-checker.onchange = function(){
-if(this.checked){
-  sendBtn.disabled = false;
-} else {
-  sendBtn.disabled = true;
-}
-
+checker.onchange = function () {
+  if (this.checked) {
+    sendBtn.disabled = false;
+  } else {
+    sendBtn.disabled = true;
+  }
 }
