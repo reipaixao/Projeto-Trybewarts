@@ -20,4 +20,4 @@ checker.onchange = function () {
   } else {
     sendBtn.disabled = true;
   }
-}
+};
