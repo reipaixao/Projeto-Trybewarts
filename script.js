@@ -9,8 +9,7 @@ bLogin.addEventListener('click', () => {
   } else {
     alert('Login ou senha inválidos.');
   }
-}
-)
+});
 
 const checker = document.getElementById('agreement');
 const sendBtn = document.getElementById('submit-btn');
