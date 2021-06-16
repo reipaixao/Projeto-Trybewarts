@@ -59,12 +59,11 @@ main {
   width: 675px;
 }
 
-<<<<<<< HEAD
-#name-lastname,
+#name-lastname {
+  display: flex;
+}
+
 #email-house {
-=======
-#name-lastname , #email-house {
->>>>>>> 315461043777c09e7efb7d09a23961329d37d173
   display: flex;
 }
 
