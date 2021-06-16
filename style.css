@@ -20,7 +20,7 @@ main {
 .header {
   background-color: rgb(50, 167, 145);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
@@ -42,10 +42,11 @@ main {
 
 .trybewarts-header-logo {
   align-self: flex-start;
+  width: 70px;
 }
 
 .form-itens {
-  margin: 5px 5px;
+  margin: 5px;
 }
 
 #trybewarts-header-title {
@@ -58,21 +59,21 @@ main {
   width: 675px;
 }
 
-#name-lastname,
-#email-house {
+#name-lastname, #email-house {
   display: flex;
 }
 
 #family {
   display: flex;
   flex-direction: column;
-  margin: 5px 5px;
+  margin: 5px;
 }
 
 #submit-btn {
   width: 100px;
   align-self: center;
 }
+
 footer {
   text-align: center;
   padding: 50px;
