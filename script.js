@@ -21,3 +21,11 @@ checker.onchange = function () {
     sendBtn.disabled = true;
   }
 };
+const textArea = document.getElementById('textarea');
+function contar (event) {
+  const counter = document.getElementById('counter');
+  const contador = 500;
+  counter.innerHTML = contador - event.target.value.length
+};
+
+textArea.addEventListener('keyup', contar);
