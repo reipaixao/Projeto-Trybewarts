@@ -22,10 +22,10 @@ checker.onchange = function () {
   }
 };
 const textArea = document.getElementById('textarea');
-function contar (event) {
+function contar(event) {
   const counter = document.getElementById('counter');
   const contador = 500;
-  counter.innerHTML = contador - event.target.value.length
-};
+  counter.innerHTML = contador - event.target.value.length;
+}
 
 textArea.addEventListener('keyup', contar);
