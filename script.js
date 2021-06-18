@@ -14,7 +14,7 @@ bLogin.addEventListener('click', () => {
 const checker = document.getElementById('agreement');
 const sendBtn = document.getElementById('submit-btn');
 
-checker.onchange = function () {
+checker.onchange = function habilita() {
   if (this.checked) {
     sendBtn.disabled = false;
   } else {
@@ -31,12 +31,11 @@ function contar(event) {
 
 textArea.addEventListener('keyup', contar);
 
-
 function getFamily() {
   const family = document.getElementsByName('family');
-  for (const key in family) {
-    if (family[key].checked) {
-      return family[key].value
+  for (let i = 0; i < family.length; i += 1) {
+    if (family[i].checked) {
+      return family[i].value;
     }
   }
 }
@@ -44,19 +43,19 @@ function getFamily() {
 function getSubjected() {
   const subjects = document.getElementsByClassName('subject');
   let selected = '';
-  for (const key in subjects) {
-    if (subjects[key].checked) {
-      selected += subjects[key].value
+  for (let j = 0; j < subjects.length; j += 1) {
+    if (subjects[j].checked) {
+      selected += `${subjects[j].value}, `;
     }
-  } 
+  }
   return selected;
 }
 
 function getAvaliation() {
   const avaliacoes = document.getElementsByName('rate');
-  for (const key in avaliacoes) {
-    if (avaliacoes[key].checked) {
-      return avaliacoes[key].value
+  for (let z = 0; z < avaliacoes.length; z += 1) {
+    if (avaliacoes[z].checked) {
+      return avaliacoes[z].value;
     }
   }
 }
