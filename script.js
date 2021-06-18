@@ -21,6 +21,7 @@ checker.onchange = function () {
     sendBtn.disabled = true;
   }
 };
+
 const textArea = document.getElementById('textarea');
 function contar(event) {
   const counter = document.getElementById('counter');
@@ -29,3 +30,55 @@ function contar(event) {
 }
 
 textArea.addEventListener('keyup', contar);
+
+
+function getFamily() {
+  const family = document.getElementsByName('family');
+  for (const key in family) {
+    if (family[key].checked) {
+      return family[key].value
+    }
+  }
+}
+
+function getSubjected() {
+  const subjects = document.getElementsByClassName('subject');
+  let selected = '';
+  for (const key in subjects) {
+    if (subjects[key].checked) {
+      selected += subjects[key].value
+    }
+  } 
+  return selected;
+}
+
+function getAvaliation() {
+  const avaliacoes = document.getElementsByName('rate');
+  for (const key in avaliacoes) {
+    if (avaliacoes[key].checked) {
+      return avaliacoes[key].value
+    }
+  }
+}
+
+const firstName = document.getElementById('input-name');
+const lastName = document.getElementById('input-lastname');
+const email = document.getElementById('input-email');
+const house = document.getElementById('house');
+
+function preencheForm() {
+  const familiaSelecionada = getFamily();
+  const subObjetoSelecionado = getSubjected();
+  const avaliacaoDoUsuario = getAvaliation();
+  const form = document.getElementsByTagName('form')[1];
+  form.innerHTML = '';
+  form.innerHTML += `Nome: ${firstName.value} ${lastName.value} <br>`;
+  form.innerHTML += `Email: ${email.value} <br>`;
+  form.innerHTML += `Casa: ${house.value} <br>`;
+  form.innerHTML += `Família: ${familiaSelecionada} <br>`;
+  form.innerHTML += `Matérias: ${subObjetoSelecionado} <br>`;
+  form.innerHTML += `Avaliação: ${avaliacaoDoUsuario} <br>`;
+  form.innerHTML += `Observações: ${textArea.value} <br>`;
+}
+
+sendBtn.addEventListener('click', preencheForm);
